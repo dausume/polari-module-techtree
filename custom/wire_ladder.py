@@ -1,5 +1,5 @@
 """
-@module techtree.wire_ladder
+@module techtree.custom.wire_ladder
 
 wire-1: THE DRAWING STRAIN of the manufacturing-tools tree.
 
@@ -37,7 +37,7 @@ that needs fine wire. A flat ladder hides that. Every loop here is
 carried WITH its documented break, because a loop without an entry
 point is a dead end and a loop with one is just an ordering problem.
 
-@consumers techtree.techtree_api, techtree.selftest_techtree
+@consumers techtree.techtree_api, techtree.techtree_selftest
 """
 
 PROV = 'wire-1'

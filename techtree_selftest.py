@@ -1,7 +1,7 @@
 """
 Selftest for the tech-tree module (tt-3).
 
-Run from polari-framework/:  python3 -m techtree.selftest_techtree
+Run from polari-framework/:  python3 -m techtree.techtree_selftest
 
 Stdlib-only (SimpleNamespace rows, no DB/falcon/treeObject). Covers:
 active-tree resolution, structural validation (evidence + knob +
@@ -14,7 +14,7 @@ tree), and the baseline-achieved gate.
 import json
 import types
 
-from techtree.techtree_analysis import (
+from techtree.custom.techtree_analysis import (
     active_tree_name, node_completion, node_data_gaps, sync_edges,
     tree_completion, tree_payload, validate_tree,
 )
@@ -257,7 +257,7 @@ if __name__ == '__main__':
           not tree_payload(mgr, 'nope').get('ok'))
 
     print('== suite: domain-tree seed coherence (tt-8) ==')
-    from techtree.techtree_analysis import baseline_report
+    from techtree.custom.techtree_analysis import baseline_report
     from techtree.techtree_seed import (
         SEED_BUSINESS_MODELS, SEED_OSEB_POLARI_MODULES,
         SEED_POLICY_DEFINITIONS, SEED_REAL_ARTIFACTS,
@@ -496,7 +496,7 @@ if __name__ == '__main__':
           len(p3d['dataGaps']) == 2)
 
     print('\n== suite: wire-1 drawing strain ==')
-    from techtree.wire_ladder import (
+    from techtree.custom.wire_ladder import (
         bootstrap_loops, drawing_strain, pcd_route, unlock_analysis,
     )
     ds = drawing_strain()
@@ -521,7 +521,7 @@ if __name__ == '__main__':
           'broken before we noticed it was a loop',
           any('CONES' in lp['break'].upper()
               for lp in loops['loops']))
-    from techtree.wire_ladder import WIRE_CONSUMERS
+    from techtree.custom.wire_ladder import WIRE_CONSUMERS
     check('the clock sits at W2, not W3 — mag-25 corrected an '
           'earlier pass that optimised for power and landed on wire '
           'too fine to run off a cell',

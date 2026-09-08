@@ -1,6 +1,6 @@
 """
 @cross-cutting
-@module techtree.techtree_content
+@module techtree.techtree_content_basis
 @tags @xc:bindings
 
 Segment-content objects (tt-6, TECH_TREE_TOPOLOGY_PLAN B3) — what
@@ -27,7 +27,7 @@ what to create.
 
 @consumers
   - polariServer.defClassList (auto-CRUDE + persistence)
-  - techtree.techtree_analysis (real/business/politics done-tests)
+  - techtree.custom.techtree_analysis (real/business/politics done-tests)
   - techtree.techtree_api (row-level upserts)
 """
 

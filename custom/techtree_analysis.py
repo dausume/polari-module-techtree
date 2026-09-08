@@ -1,6 +1,6 @@
 """
 @cross-cutting
-@module techtree.techtree_analysis
+@module techtree.custom.techtree_analysis
 
 Pure tech-tree logic (tt-3): edge derivation from depends_on_json,
 transient/primary designation (the tt-1 idiom over technologies),
@@ -26,7 +26,7 @@ NO framework imports; `manager` is anything with objectTables, so
 the selftest runs stdlib-only with SimpleNamespace rows.
 
 @consumers
-  - techtree.techtree_api / techtree.selftest_techtree
+  - techtree.techtree_api / techtree.techtree_selftest
   - polari-platform-angular tech-tree render mode (tt-4)
 """
 
